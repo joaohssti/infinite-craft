@@ -1,0 +1,23 @@
+listar todas as combinações possíveis
+
+criar uma base de dados
+
+x clicar nos itens e arrastar
+
+x usar a caixa de busca
+
+verificar se juntou com sucesso, se não limpar
+
+x fazer calibragem
+
+descobrir qual o resultado da combinação
+
+adicionar item na base de dados
+
+explorar uma palavra especifica
+
+tentar encontrar uma palavra
+
+web scrapping para ver os itens descobertos
+
+criar mapa das descobertas

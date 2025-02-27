@@ -1,0 +1,22 @@
+{
+    "bt_1item": {
+        "x": 985,
+        "y": 155
+    },
+    "bt_espacoBranco": {
+        "x": 513,
+        "y": 344
+    },
+    "bt_limpar": {
+        "x": 867,
+        "y": 1004
+    },
+    "bt_pesquisa": {
+        "x": 1029,
+        "y": 1008
+    },
+    "bt_fecharPesquisa": {
+        "x": 1237,
+        "y": 1013
+    }
+}
