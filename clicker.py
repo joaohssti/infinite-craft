@@ -24,7 +24,7 @@ def arrastar_objeto(coordenadas, botao_origem, botao_destino):
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0)
     time.sleep(0.1)
     
-    passos = 4
+    passos = 15
     # muda a posição do mouse mais devagar para o navegador detectar
     for i in range(passos):
         x = int(x_inicial + (x_final - x_inicial) * (i / passos))
@@ -55,19 +55,30 @@ def pesquisar_item(nome_item, coordenadas, chave):
     pyautogui.write(nome_item)
 
 
+def combinar(item1, item2):
+    coord = ler_cliques_json("positions.json")
+
+    # pesquisa item 1
+    pesquisar_item(item1, coord, "bt_pesquisa")
+
+    # arrasta
+    arrastar_objeto(coord, "bt_1item", "bt_espacoBranco")
+
+    # fecha pesquisa
+    clicar_soltar(coord["bt_fecharPesquisa"]["x"], coord["bt_fecharPesquisa"]["y"])
+
+    # pesquisa item 2
+    pesquisar_item(item2, coord, "bt_pesquisa")
+    
+    # arrasta
+    arrastar_objeto(coord, "bt_1item", "bt_espacoBranco")
+
+    # fecha pesquisa
+    clicar_soltar(coord["bt_fecharPesquisa"]["x"], coord["bt_fecharPesquisa"]["y"])
+
+    # limpa 
+    clicar_soltar(coord["bt_limpar"]["x"], coord["bt_limpar"]["y"])
 
 if __name__ == "__main__":
     
-    coord = ler_cliques_json("positions.json")
-
-    pesquisar_item("fire", coord, "bt_pesquisa")
-
-    arrastar_objeto(coord, "bt_1item", "bt_espacoBranco")
-
-    clicar_soltar(coord["bt_fecharPesquisa"]["x"], coord["bt_fecharPesquisa"]["y"])
-
-    pesquisar_item("water", coord, "bt_pesquisa")
-    
-    arrastar_objeto(coord, "bt_1item", "bt_espacoBranco")
-
-    clicar_soltar(coord["bt_fecharPesquisa"]["x"], coord["bt_fecharPesquisa"]["y"])
+    combinar("fire", "water")
