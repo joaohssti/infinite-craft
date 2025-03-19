@@ -1,0 +1,36 @@
+[
+    {"item": "Fogo", "comb1": null, "comb2": null, "nivel": 0},
+    {"item": "Água", "comb1": null, "comb2": null, "nivel": 0},
+    {"item": "Terra", "comb1": null, "comb2": null, "nivel": 0},
+    {"item": "Vento", "comb1": null, "comb2": null, "nivel": 0},
+
+    {"item": "Vapor", "comb1": "Fogo", "comb2": "Água", "nivel": 1},
+    {"item": "Areia", "comb1": "Terra", "comb2": "Vento", "nivel": 1},
+    {"item": "Lama", "comb1": "Terra", "comb2": "Água", "nivel": 1},
+    {"item": "Chuva", "comb1": "Água", "comb2": "Vento", "nivel": 1},
+    {"item": "Fumaça", "comb1": "Fogo", "comb2": "Vento", "nivel": 1},
+    {"item": "Lava", "comb1": "Fogo", "comb2": "Terra", "nivel": 1},
+
+    {"item": "Motor", "comb1": "Vapor", "comb2": "Fogo", "nivel": 2},
+    {"item": "Tempestade", "comb1": "Chuva", "comb2": "Vento", "nivel": 2},
+    {"item": "Neve", "comb1": "Chuva", "comb2": "Vento", "nivel": 2},
+    {"item": "Furacão", "comb1": "Vento", "comb2": "Tempestade", "nivel": 2},
+    {"item": "Pedra", "comb1": "Areia", "comb2": "Lama", "nivel": 2},
+    {"item": "Vidro", "comb1": "Areia", "comb2": "Fogo", "nivel": 2},
+    {"item": "Oceano", "comb1": "Chuva", "comb2": "Água", "nivel": 2},
+
+    {"item": "Moinho", "comb1": "Motor", "comb2": "Vento", "nivel": 3},
+    {"item": "Vulcão", "comb1": "Lava", "comb2": "Terra", "nivel": 3},
+    {"item": "Tornado", "comb1": "Furacão", "comb2": "Vento", "nivel": 3},
+    {"item": "Gelo", "comb1": "Neve", "comb2": "Água", "nivel": 3},
+    {"item": "Montanha", "comb1": "Pedra", "comb2": "Terra", "nivel": 3},
+    {"item": "Espelho", "comb1": "Vidro", "comb2": "Vidro", "nivel": 3},
+    {"item": "Mar", "comb1": "Oceano", "comb2": "Água", "nivel": 3},
+
+    {"item": "Usina", "comb1": "Moinho", "comb2": "Fogo", "nivel": 4},
+    {"item": "Erupção", "comb1": "Vulcão", "comb2": "Lava", "nivel": 4},
+    {"item": "Deserto", "comb1": "Areia", "comb2": "Vento", "nivel": 4},
+    {"item": "Cristal", "comb1": "Gelo", "comb2": "Vidro", "nivel": 4},
+    {"item": "Ilha", "comb1": "Mar", "comb2": "Montanha", "nivel": 4},
+    {"item": "Cidade", "comb1": "Usina", "comb2": "Montanha", "nivel": 5}
+]
