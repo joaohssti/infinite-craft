@@ -4,11 +4,35 @@ import win32api
 import win32con
 import time
 
+locais_clique = ["1item", "espacoBranco", "limpar", "pesquisa", "fecharPesquisa"]
+
 # retorna as coordenadas de todos os itens que devem ser clicados
 def ler_cliques_json(arquivo_entrada):
     with open(arquivo_entrada, "r") as f:
         cliques = json.load(f)
     return cliques
+
+def gravar_cliques_json(locais, arquivo_saida="positions.json"):
+
+    cliques = {}
+
+    for i in locais:
+
+        print(f"Clique no local do botão bt{i}...")
+
+        while True:
+            
+            if win32api.GetAsyncKeyState(win32con.VK_LBUTTON) < 0:
+                x, y = win32api.GetCursorPos()
+                cliques[f"bt_{i}"] = {"x": x, "y": y}
+                print(f"bt{i} mapeado em ({x}, {y})")
+                time.sleep(0.5)
+                break
+
+    with open(arquivo_saida, "w") as f:
+        json.dump(cliques, f, indent=4)
+
+    print(f"Posições dos cliques salvas em {arquivo_saida}")
 
 # lê um dicionário de posições e arrasta de uma chave até a outra
 def arrastar_objeto(coordenadas, botao_origem, botao_destino):
@@ -82,3 +106,5 @@ def combinar(item1, item2):
 if __name__ == "__main__":
     
     combinar("fire", "water")
+
+    # gravar_cliques_json(locais=locais_clique)
